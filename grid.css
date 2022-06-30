@@ -1,0 +1,110 @@
+header {
+    width: 100%;
+    text-align: center;
+}
+header p { display: inline-block;}
+a { 
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+}
+a:active {
+    border: 2px dotted white;
+}
+a:visited {
+    text-decoration: underline;
+}
+.attribution { font-size: 11px; text-align: center; padding: 1rem; border: 5px solid white;}
+.attribution a { color: white; }
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Kumbh-Sans: 'Kumbh Sans', sans-serif;
+}
+* { padding: 0; motion: 0; box-sizing: border-box;}
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: var(--Dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: -300px -600px, 650px 350px;
+    font-family: 'Kumbh Sans';
+    display: grid;
+    place-items: center;
+}
+.main {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px 5px rgb(0 0 0 / 0.2);
+    display: grid;
+    gap: 0px;
+    grid-template-areas: 
+        "bg-img bg-img bg-img"
+        "bg-img bg-img bg-img"
+        "user-info user-info"
+        "user-info user-info"
+        "stats stats stats";
+}
+.bg-img {
+    grid-area: "bg-img";
+    width: 100%;
+}
+.profile-pic {
+    display: grid;
+    place-items: center;
+    margin-top: 0;
+    z-index: 2;
+    transform: translateY(-55%);
+}
+.profile-pic-img {
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.user-info {
+    grid-area: "user-info";
+    margin-top: -4.75rem;
+    padding-bottom: 0.5rem;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--Dark-gray);
+}
+h1 {
+    font-size: 18px;
+}
+span {
+    color: var(--Dark-gray);
+    font-weight: 400;
+    font-size: 18px;
+}
+.location {
+    color: var(--Dark-gray);
+    font-size: 15px;
+    margin-top: -0.5rem;
+}
+.stats {
+    grid-area: "stats";
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+}
+.stat-info {
+    text-align: center;
+}
+.stat-count {
+    font-size: 18px;
+}
+.stat-title {
+    font-size: 14px;
+    margin-top: -0.5rem;
+    color: var(--Dark-gray);
+    font-family: var(--Kumbh-Sans);
+}

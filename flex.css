@@ -1,0 +1,93 @@
+header {
+    width: 100%;
+    text-align: center;
+}
+header p { display: inline-block;}
+a { 
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+}
+a:active {
+    border: 2px dotted white;
+}
+a:visited {
+    text-decoration: underline;
+}
+.attribution { font-size: 11px; text-align: center; padding: 1rem; border: 5px solid white;}
+.attribution a { color: white; }
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Kumbh-Sans: 'Kumbh Sans', sans-serif;
+}
+* { padding: 0; motion: 0; box-sizing: border-box;}
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: var(--Dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: -300px -600px, 650px 350px;
+    font-family: 'Kumbh Sans';
+}
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 375px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    box-shadow: 0 10px 25px 5px rgb(0 0 0 / 0.2);
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--Dark-gray);
+    padding-bottom: 0.5rem;
+}
+.profile-pic {
+    border-radius: 50%;
+    border: 5px solid white;
+    transform: translateY(-50%);
+}
+.uname {
+    margin-top: -2.25rem;
+    font-size: 1.25em;
+}
+.uname span {
+    color: var(--Dark-gray);
+}
+.location {
+    margin-top: -0.25rem;
+    color: var(--Dark-gray);
+}
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 28.33%;
+}
+.stat-count {
+    font-size: 18px;
+}
+.stat-title {
+    font-size: 14px;
+    margin-top: -0.5rem;
+    color: var(--Dark-gray);
+}
